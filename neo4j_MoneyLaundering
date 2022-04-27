@@ -1,0 +1,67 @@
+CREATE 
+(russell:FirstFraud{name: "Russell",address:"Nainital",Aadharnumber:12345678910,PhoneNumber:996655770,Loan:700000,Balance:33000}),
+(lebron:FirstFraud{name: "LeBron James",Aadharnumber:12345678910,PhoneNumber:996655770}),
+
+
+(anthony:Ecommerce{name:"Anthony Davis",Transaction1:500,Transaction2:10,Transaction3:2000000}),
+(ja:Ecommerce{name:"Ja Morant",Transactionhim:2000}),
+(luka:Ecommerce{name:"Luka Doncic"}),
+(kristaps:Ecommerce{name:"Kristaps Porzingis",Transaction:26000}),
+(kevin:Ecommerce{name:"Kevin Durant",Transaction:45000}),
+(james:Ecommerce{name:"James Harden",Transaction:420000}),
+(giannis:Ecommerce{name:"Giannis Antetokounmpo",Transaction: 470000}),
+(khris:Ecommerce{name:"Khris Middleton",Transaction:430000}),	
+(lakers:Ecommerce{name:"Laker Embiid"}),
+
+
+
+
+
+
+
+(krish:AccountTakeover{name:"Krish"}),
+(suyog:AccountTakeover{name:"Suyog"}),
+(jay:AccountTakeover{name:"Jay"}),
+(Fraudster1:AccountTakeover{name:"Fraudster1"}),
+(Fraudster2:AccountTakeover{name:"Fraudster2"}),
+
+
+
+(lebron)-[:AdharNumber{Adharnumber: 12345678910}]-> (AdharNumber),
+(russell)-[:AdharNumber {Adharnumber: 12345678910}]-> (AdharNumber),
+(russell)-[:Balance {balance: 330000}]-> (Balance),
+(russell)-[:Address {address:"mina_nagar"}]-> (Address),
+(russell)-[:Loan {loan: 700000}]-> (Loan),
+(lebron)-[:PhoneNumber{Phonenumber: 9966557701}]-> (PhoneNumber),
+(russell)-[:PhoneNumber{Phonenumber: 9966557701}]-> (PhoneNumber),
+(Fraudster1)-[:Password_Login{Login: 5}]-> (suyog),
+(Fraudster2)-[:Password_Login{Login: 2}]-> (krish),
+(anthony)-[:Transaction1{Amount: 500}]-> (lakers),
+(anthony)-[:Transaction2{Amount: 10}]-> (lakers),
+(anthony)-[:Transaction3{Amount: 2000000}]-> (lakers),
+(ja)-[:Transaction {Amount:2000}]-> (ja),
+(luka)-[:Transaction {Amount: 5000}]-> (ja),
+(kristaps)-[:Transaction {salary: 26000}]-> (kristaps),
+(kevin)-[:Friendlyfraud{salary: 45000}]-> (lakers),
+(james)-[:Friendlyfraud{salary: 420000}]-> (kevin),
+(giannis)-[:Friendlyfraud{salary: 470000}]-> (kevin),
+(khris)-[:Friendlyfraud{salary: 430000}]-> (lakers),
+(lebron)-[:Money_laundering{gh: 400}]-> (source),
+(russell)-[:Money_laundering{gh: 400}]-> (source),
+(anthony)-[:Money_laundering{gh: 400}]-> (source),
+(ja)-[:Money_laundering{gh: 400}]-> (source),
+(luka)-[:Money_laundering{gh: 400}]-> (source),
+(kristaps)-[:Money_laundering{gh: 400}]-> (source),
+(james)-[:Money_laundering{gh: 400}]-> (source),
+(khris)-[:Money_laundering{gh: 400}]-> (source),
+(giannis)-[:Money_laundering{gh: 400}]-> (source),
+(krish)-[:Money_laundering{gh: 400}]-> (source),
+(suyog)-[:Money_laundering{gh: 400}]-> (source),
+(jay)-[:Money_laundering{gh: 400}]-> (source),
+(Fraudster1)-[:Money_laundering{gh: 400}]-> (source),
+(Fraudster2)-[:Money_laundering{gh: 400}]-> (source)
+;
+
+
+
+

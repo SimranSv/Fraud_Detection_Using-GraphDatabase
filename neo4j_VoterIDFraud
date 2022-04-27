@@ -1,0 +1,12 @@
+CREATE
+(shweta:FirstFraud{name: "Shweta",address:"Nainital",Aadharnumber:12345678910,PhoneNumber:996655770}),
+(gauri:FirstFraud{name: "Gauri",address:"Nainital",Aadharnumber:12345678910,PhoneNumber:996655770}),
+(Iqbal:FirstFraud{name: "Iqbal",address:"Nalasopara",Aadharnumber:12345678910,PhoneNumber:996655771}),
+(Ritesh:FirstFraud{name: "Ritesh",address:"MiraRoad",Aadharnumber:12345678914,PhoneNumber:996655771}),
+(shweta)-[:AdharNumber{Adharnumber: 12345678910}]-> (gauri),
+(Iqbal)-[:PhoneNumber{Ph_NO: 996655771}]-> (Ritesh),
+(shweta)-[:VoterIDFraud{gh: 400}]-> (source),
+(gauri)-[:VoterIDFraud{gh: 400}]-> (source),
+(Iqbal)-[:VoterIDFraud{gh: 400}]-> (source),
+(Ritesh)-[:VoterIDFraud{gh: 400}]-> (source)
+;

@@ -1,0 +1,14 @@
+CREATE
+(krish:AccountTakeover{name:"Krish"}),
+(suyog:AccountTakeover{name:"Suyog"}),
+(jay:AccountTakeover{name:"Jay"}),
+(Fraudster1:AccountTakeover{name:"Fraudster1"}),
+(Fraudster2:AccountTakeover{name:"Fraudster2"}),
+(krish)-[:HealthCare_Fraud{gh: 400}]-> (source),
+(suyog)-[:HealthCare_Fraud{gh: 400}]-> (source),
+(jay)-[:HealthCare_Fraud{gh: 400}]-> (source),
+(Fraudster1)-[:Password_Login{Login: 5}]-> (suyog),
+(Fraudster2)-[:Password_Login{Login: 2}]-> (krish),
+(Fraudster1)-[:HealthCare_Fraud{gh: 400}]-> (source),
+(Fraudster2)-[:HealthCare_Fraud{gh: 400}]-> (source)
+;
